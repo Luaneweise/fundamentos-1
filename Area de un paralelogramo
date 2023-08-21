@@ -11,7 +11,7 @@ int main()
     cout<<"Ingresar la altura: ";
     cin>>altura;
     area=base*altura;
-    cout<<"El area es: "<<area;
+    cout<<"El area del paralegrogramo es: "<<area;
 
     return 0;
 }
