@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b,c;
+    float promedio;
+    cout<<"Ingresar el primer dato: ";
+    cin>>a;
+    if ((a>=0)&&(a<=10))
+    {
+        cout<<"Ingresar el segundo dato: ";
+        cin>>b;
+        if ((b>=0)&&(b<=10))
+        {
+            cout<<"Ingresar el tercer valor: ";
+            cin>>c;
+            if ((c>=0)&&(c<=10))
+            {
+                promedio=(a+b+c)/3.0;
+                cout<<"El promedio es: "<<promedio;
+    
+        }
+        else 
+            cout<<"El tercer numero no es valido"<<endl;
+     }
+    else
+        cout<<"El dato dos no es valido"<<endl;
+    
+    }
+    else
+    cout<<"El dato uno es invalido"<<endl;
+
+
+return 0;
+}
+
