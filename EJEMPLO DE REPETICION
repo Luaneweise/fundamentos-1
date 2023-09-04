@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b,opcion;
+    float r;
+    cout<<"Ingresar a"<<endl;
+    cin>>a;
+    cout<<"Ingresar b"<<endl;
+    cin>>b;
+    do {
+         cout<<"Menu"<<endl;
+         cout<<"1.suma"<<endl;
+         cout<<"2.resta"<<endl;
+         cout<<"3.multiplicacion"<<endl;
+         cout<<"4.division"<<endl;
+         cout<<"0. salir"<<endl;
+         cout<<"elige una opcion: "<<endl;
+         cin>>opcion;
+         switch(opcion)
+          {
+            case 1:r=a+b;break;
+            case 2:r=a-b;break;
+            case 3:r=a*b;break;
+            case 4: r=a/b;break;
+            case 0: cout<<"salir";break;
+            default: cout<<"opcion invalida"<<endl;
+          }
+            if ((opcion>=1) && (opcion<=4))
+              cout<<"El resultado es: "<<r<<endl;
+              cout<<endl;
+        }
+         
+        while (opcion!=0);
+
+    return 0;
+}
