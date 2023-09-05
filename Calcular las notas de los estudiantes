@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float p1,p2,p3,ef,pr,prom;
+    int c,n,nf;
+    
+    c==1;
+    prom=0;
+    
+    
+    cout<<"Ingresar la cantidad de estudiantes: "<<endl;
+    cin>>n;
+    while (n>=c)
+    {
+        cout<<"Ingresar parcial 1: "; cin>>p1;
+        cout<<"Ingresar parcial 2: "; cin>>p2;
+        cout<<"Ingresar parcial 3: "; cin>>p3;
+        cout<<"Ingresar la nota del examen final: "<<endl; cin>>ef;
+        cout<<"Ingresar la nota practica: "<<endl; cin>>pr;
+        cout<<"La nota del estudiante es: "<< c << "es";
+        nf= ((p1+p2+p3)/3)*0.4 + ef * 0.4 +pr * 0.2;
+        prom= (nf+prom);
+        cout<< " : " <<nf<<endl;
+        c++;
+    }
+ 
+    prom= (prom/n);
+    cout<<"El promedio de todos los estudiantes es: "<<prom<<endl;
+    
+
+    return 0;
+}
