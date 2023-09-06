@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float np,nt,nparticipacion,calificacionfinal;
+        
+        cout<<"Ingrese la nota practica: "; cin>>np;
+        cout<<"Ingrese la nota teorica: "; cin>>nt;    
+        cout<<"Ingrese la nota de participacion: "; cin>>nparticipacion;
+        
+        np = np * 0.30;
+        nt = nt * 0.60;
+        nparticipacion = nparticipacion * 0.10;
+        
+        calificacionfinal = np + nt + nparticipacion;
+        cout<<"La calificacion final es: "<<calificacionfinal<<endl;
+        
+    return 0;
+}
