@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n,c;
+    float ht,ph,bruto,neto;
+    c=1;
+    cout<<"Ingresar el numero de empleados: "; cin>>n;
+    do{
+        cout<<"Ingresar las horas trabajadas del empleado"<<c<<":";
+        cin>>ht;
+        cout<<"Ingresar el precio por horas del empleado: "<<c<<":";
+        cin>>ph;
+        c++;
+        bruto=ht*ph;
+        if(bruto>8272)
+        {
+            neto=bruto-(bruto*0.13);
+            cout<<"Pagar impuestos RC-IVA el neto: "<<neto<<endl;
+        }else {
+            cout<<"No paga impuestos RC-IVA"<<endl;
+            cout<<"Salario neto: "<<bruto<<endl;
+            
+              }
+              
+      }while (c<=n);
+    return 0;
+}
