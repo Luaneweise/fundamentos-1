@@ -1,0 +1,40 @@
+/*Autor: Airo Arroyo
+  Ejercicio 2 del parcial 2*/
+#include <iostream>
+using namespace std;
+
+int main() {
+    int opcion;
+    double montoTotal = 0.0;
+
+    do{
+        cout << "Menú de Apuestas:" << endl;
+        cout << "1. Apuesta por caballo 1" << endl;
+        cout << "2. Apuesta por caballo 2 "<< endl;
+        cout << "0. Salir" << endl;
+        cout << "Selecciona una opción: ";
+        cin >> opcion;
+    
+        if (opcion == 0){
+            break; // Salir del bucle
+        } else if (opcion == 1) {
+            double montoApuesta;
+            cout << "Introduce el monto de la apuesta para el caballo 1: ";
+            cin >> montoApuesta;
+            
+            if (montoApuesta > 0) {
+                montoTotal += montoApuesta;
+                cout << "Apuesta creada con exito para el caballo 1." << endl;
+                cout << "Monto total apostado hasta ahora: " << montoTotal << endl;
+            } else {
+                cout << "El monto de la apuesta debe ser mayor que 0." << endl;
+                }
+        } else {
+            cout << "Opcion no valida. Por favor, selecciona una opcion valida." << endl;
+        }
+    }
+    while(opcion!=0);
+    cout << "El monto total apostado es: " << montoTotal << endl;
+
+    return 0;
+}
