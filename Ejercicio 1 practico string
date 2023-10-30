@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string texto;
+
+    cout << "Introduce una cadena de texto: ";
+    getline(cin, texto);
+
+    for (char& c : texto) {
+        if (islower(c)) {
+            c = toupper(c);
+        }
+    }
+
+    cout << "Cadena en mayusculas: " << texto << endl;
+
+    return 0;
+}
