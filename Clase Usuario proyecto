@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Usuario {
+private:
+    string nombreUsuario;
+    string contraseña;
+
+public:
+    // Constructor
+    Usuario(string nombreUsuario, string contraseña) {
+        this->nombreUsuario = nombreUsuario;
+        this->contraseña = contraseña;
+    }
+
+    // Método para verificar las credenciales
+    bool verificarCredenciales(string nombreUsuario, string contraseña) {
+        return (this->nombreUsuario == nombreUsuario && this->contraseña == contraseña);
+    }
+};
+
+int main() {
+    // Crear un objeto de la clase Usuario
+    Usuario usuario("juan12", "contraseña123");
+
+    // Solicitar al usuario que ingrese su nombre de usuario y contraseña
+    string nombreUsuarioIngresado, contraseñaIngresada;
+    cout << "Ingrese su nombre de usuario: ";
+    cin >> nombreUsuarioIngresado;
+    cout << "Ingrese su contraseña: ";
+    cin >> contraseñaIngresada;
+
+    // Verificar las credenciales
+    if (usuario.verificarCredenciales(nombreUsuarioIngresado, contraseñaIngresada)) {
+        cout << "Inicio de sesion exitoso. Bienvenido, " << nombreUsuarioIngresado << "!" << endl;
+    } else {
+        cout << "Credenciales incorrectas. Inicio de sesion fallido." << endl;
+    }
+
+    return 0;
+}
+
