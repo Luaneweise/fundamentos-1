@@ -1,0 +1,140 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// Estructura para representar un nombre con su significado
+struct NombreConSignificado {
+    string nombre;
+    string significado;
+};
+
+int main() {
+    // Definir una lista de nombres con sus significados
+    NombreConSignificado nombres[80] = {
+        {"Alessandro", "Defensor de la humanidad"},
+        {"Anaís", "Llena de gracia"},
+        {"Bastian", "Venerable, sublime"},
+        {"Beatriz", "Aquella que trae felicidad"},
+        {"Carlos", "Hombre fuerte, varonil"},
+        {"Celeste", "Celestial, divina"},
+        {"Dante", "Duradero, constante"},
+        {"Delfina", "Delphinus, delfín"},
+        {"Diego", "Suplantador"},
+        {"Eva", "Vida"},
+        {"Felipe", "Amante de los caballos"},
+        {"Flavia", "Dorada, rubia"},
+        {"Gael", "Forastero generoso"},
+        {"Giselle", "Juramento"},
+        {"Iker", "Visitante"},
+        {"Inés", "Casta, pura"},
+        {"Iván", "Dios es misericordioso"},
+        {"Julieta", "Juvenil, llena de juventud"},
+        {"Leandro", "León valiente"},
+        {"Lorenzo", "Coronado de laurel"},
+        {"Magdalena", "Elevada, magnífica"},
+        {"Marco", "Guerrero, dedicado a Marte"},
+        {"Marina", "Perteneciente al mar"},
+        {"Maximiliano", "El más grande"},
+        {"Melanie", "Oscura, negra"},
+        {"Natalia", "Día del nacimiento"},
+        {"Noah", "Descanso, consuelo"},
+        {"Olivia", "Olivero, símbolo de paz"},
+        {"Pablo", "Pequeño, humilde"},
+        {"Paloma", "Mensajera de paz"},
+        {"Rafael", "Dios ha curado"},
+        {"Renata", "Renacida"},
+        {"Rodrigo", "Poderoso en la fama"},
+        {"Romina", "Romana, ciudadana de Roma"},
+        {"Salvador", "Salvador, liberador"},
+        {"Simón", "Oye, escucha"},
+        {"Tatiana", "Reina de los Tatarios"},
+        {"Tomás", "Gemelo"},
+        {"Ursula", "Pequeña osa"},
+        {"Vicente", "Victorioso, conquistador"},
+        {"Ximena", "Oye, escucha"},
+        {"Yael", "Cabra montés"},
+        {"Zara", "Princesa"},
+        {"Zenón", "Regalo de Zeus"},
+        {"Zoe", "Vida"},
+        {"Adriana", "Natural de Adria"},
+        {"Benjamín", "Hijo de la diestra"},
+        {"Carmen", "Jardín, huerto"},
+        {"Ciro", "Sol"},
+        {"Diana", "Divina, celestial"},
+        {"Eduardo", "Guardián de las riquezas"},
+        {"Elena", "Resplandeciente, brillante"},
+        {"Fabián", "Cultivador de habas"},
+        {"Gloria", "Gloria, fama"},
+        {"Horacio", "Hora, momento oportuno"},
+        {"Isidro", "Don de Isis"},
+        {"Jaime", "Suplantador"},
+        {"Kira", "Señora, reina"},
+        {"Lautaro", "Céfiro, viento del sur"},
+        {"Luciana", "Luminosa, resplandeciente"},
+        {"Manuel", "Dios está con nosotros"},
+        {"Nadia", "Esperanza"},
+        {"Oscar", "Lanza de dioses"},
+        {"Paula", "Pequeña"},
+        {"Quirino", "Guerrero"},
+        {"Raquel", "Cordera, mansa"},
+        {"Ricardo", "Poderoso, valiente gobernante"},
+        {"Santiago", "Suplantador"},
+        {"Sofía", "Sabiduría"},
+        {"Teodoro", "Regalo de Dios"},
+        {"Úrsula", "Pequeña osa"},
+        {"Valeria", "Valiente"},
+        {"Walter", "Gobernante del ejército"},
+        {"Xenia", "Hospitalidad"},
+        {"Yasmin", "Jazmín, flor fragante"},
+        {"Zachary", "Recordado por Dios"},
+        {"Amara", "Inmortal"},
+        {"Bruno", "Marrón, color café"},
+        {"Celia", "Celestial"},
+        {"Dario", "Poseedor de bienes"}
+    };
+
+    // Mostrar menú
+    while (true) {
+        cout << "\n=== Menú de Nombres ===\n";
+        cout << "1. Mostrar todos los nombres y significados\n";
+        cout << "2. Buscar información de un nombre\n";
+        cout << "3. Salir\n";
+        cout << "Ingrese la opción deseada (1-3): ";
+
+        int opcion;
+        cin >> opcion;
+
+        switch (opcion) {
+            case 1:
+                // Mostrar todos los nombres y significados
+                for (int i = 0; i < 80; ++i) {
+                    cout << i + 1 << ". " << nombres[i].nombre << " - " << nombres[i].significado << "\n";
+                }
+                break;
+            case 2:
+                // Buscar información de un nombre
+                cout << "Ingrese el número del nombre que desea buscar: ";
+                int numNombre;
+                cin >> numNombre;
+
+                // Verificar si la elección es válida
+                if (numNombre >= 1 && numNombre <= 80) {
+                    // Mostrar información detallada del nombre seleccionado
+                    cout << "Nombre: " << nombres[numNombre - 1].nombre << "\n";
+                    cout << "Significado: " << nombres[numNombre - 1].significado << "\n";
+                } else {
+                    cout << "Selección no válida.\n";
+                }
+                break;
+            case 3:
+                // Salir del programa
+                cout << "¡Adiós!\n";
+                return 0;
+            default:
+                cout << "Opción no válida. Inténtelo de nuevo.\n";
+        }
+    }
+
+    return 0;
+}
