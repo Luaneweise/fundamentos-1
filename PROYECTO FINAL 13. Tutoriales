@@ -1,0 +1,64 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    // Preguntas y respuestas
+    string preguntas[] = {
+        "1. Tengo náuseas y vómitos. ¿Es normal? ¿Me van a durar todo el embarazo? ¿Se me pasan con alguna medicación?",
+        "2. ¿La constipación es por el embarazo?",
+        "3. Nunca tuve acidez y ahora tengo, ¿qué puedo hacer? ¿Tomo antiácidos?",
+        "4. Experimento calambres en las piernas, ¿es normal? ¿Qué debo hacer?",
+        "5. Tengo las piernas hinchadas y me han aparecido várices, ¿es peligroso? ¿Hay algún tratamiento para realizar durante el embarazo?",
+        "6. ¿El dolor de espalda, es normal?",
+        "7. ¿Me encuentro más agitada, en la medida que mi panza crece, es normal?",
+        "8. ¿Tengo que tomar medicamentos por la baja presión?",
+        "9. ¿Sirven las cremas para prevenir las estrías?",
+        "10. ¿Cambia el color de mi piel?",
+        "11. ¿Debo ir al odontólogo? ¿Es conveniente realizar cualquier tratamiento odontológico?",
+        "12. ¿Puedo manejar?",
+        "13. ¿Puedo realizar deportes? ¿Gimnasia?",
+        "14. ¿Está contraindicado beber alcohol?",
+        "15. ¿Se permite tener relaciones sexuales durante todo el embarazo?",
+        "16. ¿Puedo viajar embarazada?"
+    };
+
+    string respuestas[] = {
+        "Las náuseas y vómitos son comunes durante el primer trimestre. Pueden durar, pero generalmente disminuyen. Consulta con tu médico antes de tomar medicación.",
+        "Sí, la constipación es común durante el embarazo. Dieta rica en fibra y líquidos puede ayudar.",
+        "La acidez es frecuente. Comer pequeñas cantidades y evitar acostarse después de comer puede ayudar. Consulta al médico antes de tomar antiácidos.",
+        "Los calambres son normales, especialmente en la segunda mitad del embarazo. Masajes y estiramiento pueden ayudar.",
+        "La hinchazón en las piernas es común y no peligrosa. Medias de compresión y elevación de los pies pueden ayudar.",
+        "El dolor de espalda es normal. Colocar una almohada bajo la panza puede aliviar los dolores.",
+        "Los cambios circulatorios pueden aumentar la agitación. Es normal sentirse más agitada a medida que la panza crece.",
+        "La baja presión no es perjudicial. No es necesario medicarse. Beber líquidos y esperar a que desaparezca la sensación de mareo es suficiente.",
+        "Las cremas pueden ayudar a algunas mujeres con estrías. No hay evidencia científica de su eficacia.",
+        "Algunas mujeres experimentan cambios en la pigmentación de la piel durante el embarazo. Consulta con tu médico si tienes preocupaciones.",
+        "Es recomendable consultar al dentista durante el embarazo. Se pueden realizar tratamientos odontológicos, incluyendo aquellos con anestesia local.",
+        "Sí, puedes manejar. Ajusta el cinturón de seguridad para mayor comodidad. La principal causa de muerte fetal en accidentes es la muerte de la madre.",
+        "El ejercicio aeróbico es beneficioso durante el embarazo. Si estabas acostumbrada, puedes continuar, pero no comiences una nueva actividad sin consultar al médico.",
+        "Se recomienda abstenerse de alcohol durante el embarazo para prevenir posibles daños al feto.",
+        "En embarazos normales, las relaciones sexuales son seguras. Consulta con tu médico si tienes preocupaciones.",
+        "Viajar es seguro en el segundo trimestre. En el tercer trimestre, consulta con tu médico antes de viajar debido a posibles complicaciones."
+    };
+
+    // Mostrar preguntas y recibir elección del usuario
+    cout << "Seleccione el número de la pregunta que desea hacer:\n";
+    for (int i = 0; i < sizeof(preguntas) / sizeof(preguntas[0]); ++i) {
+        cout << preguntas[i] << endl;
+    }
+
+    int eleccion;
+    cout << "Ingrese el número de la pregunta: ";
+    cin >> eleccion;
+
+    // Validar la elección del usuario y mostrar la respuesta correspondiente
+    if (eleccion >= 1 && eleccion <= sizeof(preguntas) / sizeof(preguntas[0])) {
+        cout << "Respuesta: " << respuestas[eleccion - 1] << endl;
+    } else {
+        cout << "Número de pregunta inválido." << endl;
+    }
+
+    return 0;
+}
